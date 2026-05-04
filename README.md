@@ -1,23 +1,19 @@
-# Autogenesis
+# Deep Research Agent
 
 English | [中文说明](README_zh.md)
 
-Autogenesis is a self-evolution protocol and runtime for LLM-based agent systems.
+Deep Research Agent is a self-evolution protocol and runtime for LLM-based agent systems.
 
-Recent agent protocols often under-specify cross-entity **lifecycle/context management**, **version tracking**, and **safe evolution update interfaces**, which encourages monolithic compositions and brittle glue code. Autogenesis addresses this by decoupling **what evolves** from **how evolution occurs**:
+Recent agent protocols often under-specify cross-entity **lifecycle/context management**, **version tracking**, and **safe evolution update interfaces**, which encourages monolithic compositions and brittle glue code. Deep Research Agent addresses this by decoupling **what evolves** from **how evolution occurs**:
 
 - **RSPL (Resource Substrate Protocol Layer)**: models *prompts, agents, tools, environments, and memory* as protocol-registered resources with explicit **state**, **lifecycle**, and **versioned** interfaces.
 - **SEPL (Self Evolution Protocol Layer)**: specifies a closed-loop operator interface to **propose**, **assess**, and **commit** improvements with auditable lineage and **rollback**.
 
-Built on Autogenesis, the system includes an **Autogenesis-Agent** style tool-calling agent that can dynamically instantiate/retrieve/refine resources and improve during execution.
-
-## Architecture
-
-![Autogenesis architecture](docs/architecture.png)
+Built on Deep Research Agent, the system includes a **Deep Research Agent** style tool-calling agent that can dynamically instantiate/retrieve/refine resources and improve during execution.
 
 ## Self-evolution at a glance
 
-At a high level, Autogenesis supports an iterative loop:
+At a high level, Deep Research Agent supports an iterative loop:
 
 - **Act**: an agent produces actions/outputs using an LLM and the available tools/environments.
 - **Observe**: capture outcomes, traces, intermediate reasoning, and environment feedback.
@@ -43,7 +39,7 @@ At a high level, Autogenesis supports an iterative loop:
 ## Repository layout
 
 ```
-Autogenesis/
+DeepResearchAgent/
   configs/                 # config composition (agents/tools/envs/memory/models)
   src/
     agent/                 # agents
@@ -58,10 +54,6 @@ Autogenesis/
   libs/                    # vendored libraries
   workdir/                 # runtime artifacts (logs, traces, results, etc.)
 ```
-
-## Empirical studies
-
-See empirical results and benchmark protocols in `docs/empirical_studies.md`.
 
 ## Optional: run a Tool-Calling Agent
 
